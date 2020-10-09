@@ -1,0 +1,139 @@
+ @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+body{
+    font-size: 12px;
+    margin: 120px;   
+    background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));  
+}
+main{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 65vh;
+    margin: auto;
+    border-radius: 25px;
+    background-color: #fff;   
+}
+.acc__section{
+    width: 50%;
+    padding: 20px 50px;
+    color: hsl(237, 12%, 33%);
+}
+.image__sec{
+    display: flex;
+    justify-content: flex-start;  
+    width: 50%;
+    background: url('./images/bg-pattern-desktop.svg') no-repeat;
+    background-size: 85%;
+    background-position: -50% -50%;
+}
+.question{
+    font-size: 22px;
+}
+.accordion {
+    color: #444;
+    cursor: pointer;
+    padding: 12px 0;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    background-color: transparent;
+  }
+.acc{
+    margin-top: 15px;
+    border-bottom: 1px solid #e5e5e5; 
+}
+.panel {
+    background-color: white;
+    display: none;
+    margin-bottom: 10px;
+}
+.fa{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    color: #FA5757 !important;
+} 
+.arrow{
+    float: right;
+}
+.active{
+    font-weight: 700;
+    font-size: 14px;
+}
+.image__sec img:nth-child(1){
+    object-fit: contain;
+    margin-left: -130px;
+    margin-top: 90px;
+    z-index: 100;
+    overflow: visible !important;
+}
+.image__sec img:nth-child(2){
+    width: 95%;
+    margin-left: -130px;   
+}
+.mobile-bg{
+    display: none;
+}
+@media (max-width: 992px){
+    body{
+        margin-top: 180px;
+    }
+    main{
+        flex-direction: column;
+    }
+    .question{
+        text-align: center;
+    }
+    .image__sec{
+        width: 100%;
+        background-size: 80%;
+        background-position: center bottom;
+    }
+    .acc__section{
+        width: 100%;
+        margin: 20px 0;
+    }
+    .desktop-bg{
+        display: none;
+    }
+    .mobile-bg{
+        display: block;
+        width: 87%;
+        margin-top: -160px;
+    }
+    .image__sec img:nth-child(1){
+        margin: 0;
+    }
+}
+@media (max-width: 768px){
+    body{
+        margin: 0;
+        margin-top: 200px;
+    }
+}
+@media (max-width: 480px){
+    body{
+        margin: 0;
+        margin: 200px 0;
+    }
+    .mobile-bg{
+        margin-top: -130px;
+    }
+    .image__sec{
+        background-size: 75%;
+    }
+    main{
+        width: 90%;
+    }
+}
